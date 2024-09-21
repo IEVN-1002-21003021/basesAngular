@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'basesAngular';
-/* 
+
   dobleNumero(x:number):number{
     return x*2;
   }
@@ -20,5 +20,5 @@ export class AppComponent {
     fechaInscrito: new Date(),
     pago: 2220
 
-  } */
+  } 
 }
