@@ -2,12 +2,13 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html', /*aqui le decimos de donde se va a traer*/
+  templateUrl: './app.component.html', 
+  
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'basesAngular';
-
+/* 
   dobleNumero(x:number):number{
     return x*2;
   }
@@ -19,5 +20,5 @@ export class AppComponent {
     fechaInscrito: new Date(),
     pago: 2220
 
-  }
+  } */
 }

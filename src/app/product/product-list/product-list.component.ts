@@ -7,4 +7,41 @@ import { Component } from '@angular/core';
 })
 export class ProductListComponent {
 
+
+  productos:any[]=[
+    {
+      "ProductoId":1,
+      "Modelo":"sentra",
+      "Descripcion":"4 puertas",
+      "Precio": 20000,
+      "year":2024,
+      "Marca":"NISSAN",
+      "Color":"Azul",
+      "imagenUrl":""
+    },
+    {
+      "ProductoId":2,
+      "Modelo":"audi",
+      "Descripcion":"4 puertas",
+      "Precio": 20000,
+      "year":2024,
+      "Marca":"AUDI",
+      "Color":"verde",
+      "imagenUrl":""
+
+    },
+    {
+      "ProductoId":3,
+      "Modelo":"Rio",
+      "Descripcion":"4 puertas",
+      "Precio": 20000,
+      "year":2024,
+      "Marca":"KIA",
+      "Color":"rojo",
+      "imagenUrl":""
+
+    }
+
+  ]
+
 }
