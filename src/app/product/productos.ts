@@ -7,5 +7,5 @@ export interface Productos {
       year:string;
       Marca:string;
       Color:string;
-      imagenUr:string
+      imagenUrl:string
 }

@@ -1,0 +1,37 @@
+<div class="container"></div>
+  <h2>Boletos Cinépolis</h2>
+  
+  <form (ngSubmit)="calcularTotal()">
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input type="text" class="form-control" id="nombre" [(ngModel)]="nombre" name="nombre" required />
+    </div>
+
+    <div class="form-group">
+      <label for="cantidad">Cantidad de Boletos:</label>
+      <input type="number" class="form-control" id="cantidad" [(ngModel)]="cantidadBoletos" name="cantidadBoletos" required min="1" max="7" />
+    </div>
+
+    <div class="form-group">
+      <label for="cantidad">Cantidad de personas:</label>
+      <input type="number" class="form-control" id="cantidad" [(ngModel)]="cantidadPersonas" name="cantidadBoletos" required min="1" max="7" />
+    </div>
+
+    <div class="form-group">
+      <label>¿Usa Tarjeta Cinépolis?</label>
+      <div>
+        <input type="radio" id="tarjetaSi" name="tarjetaCinepolis" [(ngModel)]="tarjetaCinepolis" [value]="true" /> Sí
+        <input type="radio" id="tarjetaNo" name="tarjetaCinepolis" [(ngModel)]="tarjetaCinepolis" [value]="false" /> No
+      </div>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Calcular Total</button>
+    </div>
+  </form>
+
+  <div *ngIf="valorAPagar >= 0" class="resultado">
+    <h3>Nombre del Comprador: {{ nombre }}</h3>
+    <h3>Cantidad de personas: {{  cantidadPersonas }}</h3>
+    <h3>Valor a pagar: {{ valorAPagar | currency:"" }}</h3>
+  </div>

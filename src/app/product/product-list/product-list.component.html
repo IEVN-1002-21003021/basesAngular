@@ -5,10 +5,10 @@
     <div class="card-body">
         <div class="row">
             <div class="col-md-2">
-                filtra por
+                filtra por:
             </div>
             <div class="col-md-4">
-                <input type="text" [(ngModel)]="filtrar" class="form-control">
+                <input type="text" [(ngModel)]="listFilter" class="form-control">
             </div>
         </div>
         <div class="row">
@@ -21,7 +21,8 @@
                 <thead>
                     <tr >
                         <th>
-                            <button type="button" class="btn btn-primary" (click)="muestraImg">{{muestraImg?'oculta':'Muestra'}}Imagen</button>
+                            <button type="button" class="btn btn-primary" 
+                            (click)="muestImg()">{{muestraImg?'oculta':'Muestra'}}Imagen</button>
                         </th>
                         <th>Imagen</th>
                         <th>modelo</th>
@@ -33,9 +34,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                <tr *ngfor="let producto of productos | productosFilter:listFilter">
+                <tr *ngFor="let producto of productos | productosFilter:listFilter">
                     <td>
-                        <img [src]="producto.Url"
+                        <img [src]="producto.imagenUrl"
                         *ngIf="muestraImg"
                         [title]="producto.Modelo"
                         [style.width.px]="imageWidth"
@@ -43,15 +44,15 @@
                         
                     </td>
                     <td>{{producto.imagenUrl}}</td>
-                    <td>{{producto.modelo}}</td>
-                    <td>{{producto.descripcion}}</td>
+                    <td>{{producto.Modelo}}</td>
+                    <td>{{producto.Descripcion}}</td>
                     <td>{{producto.year | date}}</td>
-                    <td>{{producto.precio | currency}}</td>
+                    <td>{{producto.Precio | currency}}</td>
                     <td>{{producto.marca} | uppercase}</td>
-                    <td>{{producto.color}}</td>
+                    <td>{{producto.Color}}</td>
                 </tr>
                 </tbody>
-                </table>
+                </table>s
         </div>
     </div>
 </div>
